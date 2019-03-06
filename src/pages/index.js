@@ -30,7 +30,7 @@ class IndexPage extends React.Component {
   }
 
   render() {
-    const listItems = this.props.data.allContentfulLocation.edges.reduce((elements, reference, i) => {
+    const listItems = this.props.data.allPins.edges.reduce((elements, reference, i) => {
       const showElement = this.state.filteredType === ""
         || this.state.filteredType === "all"
         || this.state.filteredType === reference.node.type
@@ -57,7 +57,7 @@ class IndexPage extends React.Component {
           </div>
           <div style={{ width: '80%', height: '100vh' }}>
             <Map
-              data={this.props.data.allContentfulLocation.edges}
+              data={this.props.data.allPins.edges}
               clickedCard={this.state.clickedCard}
               filteredType={this.state.filteredType}
             />
@@ -68,18 +68,16 @@ class IndexPage extends React.Component {
   }
 }
 
-export const query = graphql`
-  {
-    allContentfulLocation {
+export const query = graphql`{
+    allPins{
       edges {
         node {
+          lat,
+          link,
+          lng,
+          name,
+          type,
           id
-          name
-          description
-          link
-          lat
-          lng
-          type
         }
       }
     }

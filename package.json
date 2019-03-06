@@ -8,6 +8,7 @@
     "gatsby": "^2.1.18",
     "gatsby-plugin-react-helmet": "^3.0.7",
     "gatsby-source-contentful": "^2.0.32",
+    "gatsby-source-firestore": "^1.0.3",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-helmet": "^5.2.0"
