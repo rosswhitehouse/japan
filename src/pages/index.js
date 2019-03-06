@@ -77,7 +77,8 @@ export const query = graphql`{
           lng,
           name,
           type,
-          id
+          id,
+          description
         }
       }
     }

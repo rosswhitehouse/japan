@@ -18,6 +18,7 @@ module.exports = {
               lng: doc.lng,
               name: doc.name,
               type: doc.type,
+              description: doc.description
             }),
           }
         ],
